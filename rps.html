@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <body>
+
+        <script>
+            function game(){
+        //Set choices array here
+            let choices = ["Rock", "Paper", "Scissors"]
+
+            //set computerPlay function here
+            function computerPlay() {
+                return (choices[Math.floor(Math.random() * choices.length)]);
+            }
+            let computerSelection = computerPlay();
+
+            //set playerSelection function here
+            let playerSelection = prompt("Choose your weapon!(Rock, Paper, Scissors")
+            let playerPlay = upper(playerSelection);
+
+            //capitalize function here(done)
+            function upper(word){
+                word = word[0].toUpperCase() + word.toLowerCase().slice(1);
+                return (word);
+            } //tested and works so far
+
+            var player_tally = 0;
+            var computer_tally = 0;
+            var tie_tally = 0;
+
+            //set game function here (using old code)
+            
+            function oneRound(playerPlay, computerSelection) {
+                if (playerPlay == computerSelection){
+                    return "You've drawn!";
+                    tie_tally+=1;
+                }
+                if (playerPlay == "Rock") {
+                    if(computerSelection === "Scissors"){
+                    return "You've won!";
+                    player_tally +=1;
+                    }
+                    else{
+                        return "You've lost.";
+                        computer_tally +=1;
+                    }
+                }
+                if(playerPlay==="Scissors"){
+                    if(computerSelection==="Paper"){
+                        return "You've won!";
+                        player_tally +=1;
+                    }
+                    else{
+                        return "You've lost.";
+                        computer_tally +=1;
+                    }
+                }
+                if(playerPlay==="Paper"){
+                    if(computerSelection==="Rock"){
+                        return "You've won!";
+                        player_tally +=1;
+                    }
+                    else{
+                        return "You've lost";
+                        computer_tally+=1;
+                    }
+                }
+                else{
+                    return "You didn't even try!"
+                }
+            }
+
+            //call for game here
+            console.log("You selected: " + playerPlay)
+            console.log("Computer selected: " + computerSelection)
+            console.log(oneRound(playerPlay, computerSelection))
+            console.log("Player:" + player_tally)
+            console.log("Computer:" + computer_tally)
+            console.log("Draw:" + tie_tally)
+        }
+            
+    
+game();
+game();
+game();
+game();
+game();
+        </script>
+    </body>
+</html>
