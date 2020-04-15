@@ -1,0 +1,49 @@
+body{
+    background-color: #FFC300;
+  }
+  .top{
+    text-align: center;
+  }
+  .flex-container{
+    display: flex;
+    justify-content: space-around;
+    margin: 5em;
+    
+  }
+  button{
+    background-color: #2980B9;
+    color: white;
+    border: 5px solid #2471A3;
+    
+    height : 100px;
+    width: 100px; 
+    font-size: 20px; 
+    transition-duration: .5s;
+  }
+  table, th, td {
+    border: 1px solid #2471A3;
+    color: #2980B9;
+    text-align: center;
+  }
+  
+  #rock:hover{
+    background-image: url(https://static.thenounproject.com/png/477918-200.png);
+    background-size: cover;
+    font-size: .1px;
+  }
+  
+  #scissors:hover{
+    background-image: url(https://static.thenounproject.com/png/477919-200.png);
+    background-size: cover;
+    font-size: .1px;
+  }
+  
+  #paper:hover{
+    background-image: url(https://i.dlpng.com/static/png/6409572_thumb.png);
+    background-size: cover;
+    font-size: .1px;
+  }  
+#res{
+    text-align: center;
+    color: #2980B9;
+}
